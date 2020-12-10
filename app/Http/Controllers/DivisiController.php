@@ -125,7 +125,7 @@ class DivisiController extends Controller
      */
     public function edit(Divisi $divisi)
     {
-        if (Auth::user()->hasRole('SUPER ADMINISTRATOR')) {
+        if (Auth::user()->hasRole('SUPER ADMINISTRATOR|ADMINISTRATOR HOLDING')) {
             $ptpn = Ptpn::orderBy('id')->get();
         } else {
             $ptpn = Ptpn::orderBy('id')->where('id', Auth::user()->ptpn_id)->get();
