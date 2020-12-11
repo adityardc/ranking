@@ -208,6 +208,7 @@
                             <th>Nama Karyawan</th>
                             <th style="width: 20%">Sub Bagian</th>
                             <th style="width: 7%">Gol. Awal</th>
+                            <th style="width: 7%">Gol. Usulan</th>
                             <th style="width: 7%">Gol. Final</th>
                             <th style="width: 20%">Aksi</th>
                         </thead>
@@ -223,6 +224,7 @@
                                         <td>{{ $valKar->nama }}</td>
                                         <td>{{ $valKar->sub_bagian }}</td>
                                         <td style="text-align: center">{{ $valKar->gol_awal."/".$valKar->mkg_awal }}</td>
+                                        <td style="text-align: center">{{ $valKar->gol_usul."/".$valKar->mkg_usul }}</td>
                                         <td style="text-align: center">{{ ($valKar->gol_final == "") ? "" : $valKar->gol_final."/".$valKar->mkg_final }}</td>
                                         <td>
                                             <select name="penilaian" id="penilaian" data-indikator="{{ $data[0]->indikator_id }}" data-id="{{ $valKar->id }}" data-gol="{{ $valKar->gol_awal }}" data-mkg="{{ $valKar->mkg_awal }}" class="form-control modalNilai">
